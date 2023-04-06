@@ -1,5 +1,5 @@
 # CurlWithSSL
-This is an example PocketMine-MP plugin that showcases the usage of cURL with `CURLOPT_SSL_VERIFYPEER=true`.
+PocketMine plugins<sup>[[tebexio/BuycraftPM](https://github.com/tebexio/BuycraftPM/issues/48) and [many others](https://github.com/search?q=pocketmine+CURLOPT_SSL_VERIFYPEER+false&type=code)]</sup> tend to address the issue of missing SSL certificates on the client-side (`"SSL certificate problem: unable to get local issuer certificate"`) by setting `CURLOPT_VERIFYPEER` to `false`, [making the connection vulnerable to man-in-the-middle (MITM) attacks](https://curl.se/libcurl/c/CURLOPT_SSL_VERIFYPEER.html). This is an example PocketMine-MP plugin that showcases the usage of cURL with `CURLOPT_SSL_VERIFYPEER=true`.
 
 To enable cURL with `CURLOPT_SSL_VERIFYPEER=true`, the plugin comes bundled with a Certificate Authority (CA) certificate obtained from https://curl.haxx.se/ca/cacert.pem.
 The certificate is stored within the plugin's [`/resources`](https://github.com/Muqsit/CurlWithSSL/tree/master/plugin/resources) directory.
