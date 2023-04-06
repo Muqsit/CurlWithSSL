@@ -62,10 +62,10 @@ final class Main extends PluginBase{
 
 		$operations = [
 			// GET request
-			new BulkCurlTaskOperation("http://curlwithssltest.pages.dev/api/profile", 10, [], $curl_opts),
+			new BulkCurlTaskOperation("https://curlwithssl.pages.dev/api/profile", 10, [], $curl_opts),
 
 			// POST request
-			new BulkCurlTaskOperation("http://curlwithssltest.pages.dev/api/profile", 10, [], $curl_opts + [CURLOPT_CUSTOMREQUEST => "POST"])
+			new BulkCurlTaskOperation("https://curlwithssl.pages.dev/api/profile", 10, [], $curl_opts + [CURLOPT_CUSTOMREQUEST => "POST"])
 		];
 
 		$on_completion = function(array $results) : void{
